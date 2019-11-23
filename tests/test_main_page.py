@@ -19,7 +19,7 @@ def test_login_user(driver):
     driver.find_element(*MainPage.HeaderSection.logout_button).click()
     assert driver.find_element(*MainPage.InnerSection.logout_breadcrumb).text == 'Logout'
 
-def test_adding_to_wish_list(driver, url_param):
+def test_adding_to_wish_list(driver):
     """Тест добавления позиции в список желаемых покупок"""
     driver.get(data['url'])
     driver.find_element(*MainPage.HeaderSection.my_account_link).click()
@@ -45,7 +45,7 @@ def test_adding_to_wish_list(driver, url_param):
     driver.find_element(*MainPage.HeaderSection.logout_button).click()
     assert driver.find_element(*MainPage.InnerSection.logout_breadcrumb).text == 'Logout'
 
-def test_removal_position_from_wish_list(driver, url_param):
+def test_removal_position_from_wish_list(driver):
     """Тест удаления позиции из списка желаемых покупок"""
     driver.get(data['url'])
     driver.find_element(*MainPage.HeaderSection.my_account_link).click()
@@ -62,6 +62,7 @@ def test_removal_position_from_wish_list(driver, url_param):
     for element in feature_elements:
         assert element.text in product_list
         print(element.text)
+        print(element.text)
     feature_element = driver.find_elements(*MainPage.MainSection.featured_section)[0]
     feature_element.click()
     driver.find_element(*MainPage.HeaderSection.wish_list_link).click()
@@ -71,7 +72,7 @@ def test_removal_position_from_wish_list(driver, url_param):
     driver.find_element(*MainPage.HeaderSection.logout_button).click()
     assert driver.find_element(*MainPage.InnerSection.logout_breadcrumb).text == 'Logout'
 
-def test_adding_to_shopping_cart(driver, url_param):
+def test_adding_to_shopping_cart(driver):
     """Тест добавления позиции в корзину покупок"""
     driver.get(data['url'])
     driver.find_element(*MainPage.HeaderSection.my_account_link).click()
@@ -94,7 +95,7 @@ def test_adding_to_shopping_cart(driver, url_param):
     driver.find_element(*MainPage.HeaderSection.logout_button).click()
     assert driver.find_element(*MainPage.InnerSection.logout_breadcrumb).text == 'Logout'
 
-def test_removal_position_from_shopping_cart(driver, url_param):
+def test_removal_position_from_shopping_cart(driver):
     """Тест удаления позиции из корзины покупок"""
     driver.get(data['url'])
     driver.find_element(*MainPage.HeaderSection.my_account_link).click()
