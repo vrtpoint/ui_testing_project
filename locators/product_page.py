@@ -23,7 +23,7 @@ class AdminPage:
         add_product_item = (By.CSS_SELECTOR, '.container-fluid .pull-right .btn-primary i')
         edit_product_item = (By.CSS_SELECTOR, '#form-product .table-responsive tr [data-original-title="Edit"]')
         description_field = (By.CSS_SELECTOR, '.note-editor .panel-body')
-        submition_button = (By.CSS_SELECTOR, '.pull-right button[type="submit"]')
+        submission_button = (By.CSS_SELECTOR, '.pull-right button[type="submit"]')
         delete_product_item = (By.CSS_SELECTOR, '.container-fluid .pull-right .btn-danger')
         operation_status = (By.CSS_SELECTOR, '.alert-success.alert-dismissible')
         product_name_field = (By.CSS_SELECTOR, '#input-name1')

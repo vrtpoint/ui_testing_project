@@ -1,7 +1,7 @@
-import time
 from selenium.webdriver.common.alert import Alert
 from locators.product_page import LoginProductPage, AdminPage
 from config import setUpConfig
+import time
 
 
 data = setUpConfig()
@@ -22,7 +22,7 @@ def test_addition_product_item(driver):
     driver.find_element(*AdminPage.Products.data_link).click()
     driver.find_element(*AdminPage.Products.model_field).clear()
     driver.find_element(*AdminPage.Products.model_field).send_keys('Product 1')
-    driver.find_element(*AdminPage.Products.submition_button).click()
+    driver.find_element(*AdminPage.Products.submission_button).click()
     assert driver.find_element(*AdminPage.Products.operation_status).text.split("\n")[0] == 'Success: You have modified products!'
     driver.find_element(*AdminPage.logout_button).click()
     assert driver.find_element(*LoginProductPage.entry_title).text == 'Please enter your login details.'
