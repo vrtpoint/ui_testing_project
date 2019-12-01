@@ -1,10 +1,10 @@
 from selenium import webdriver
 import pytest
-
+from fixtures.application import ApplicationHelper
 
 def pytest_addoption(parser):
     """Добавление различных аргументов командной строки"""
-    parser.addoption("--browser", action="store", default="chrome", help="This is request browser", required=False)
+    parser.addoption("--browser", action="store", default="firefox", help="This is request browser", required=False)
     parser.addoption("--headless", action="store", default=False, help="This is headless mode")
 
 @pytest.fixture(scope="session")
@@ -24,6 +24,6 @@ def driver(request):
         driver = webdriver.Safari()
     elif browser == "opera":
         driver = webdriver.Opera()
-
-    request.addfinalizer(driver.close)
-    return driver
+    fixture = ApplicationHelper()
+    request.addfinalizer(fixture.destroy)
+    return fixture
