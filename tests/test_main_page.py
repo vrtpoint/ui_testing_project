@@ -1,4 +1,3 @@
-from locators.main_page import MainPage
 from config import setUpConfig
 
 
