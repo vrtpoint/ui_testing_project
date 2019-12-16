@@ -65,7 +65,7 @@ class Products(BaseActions):
 
         def remove_position_from_shopping_cart(self):
             self.click(*self.product.HeaderSection.logo_name)
-            self.click(*MainPage.HeaderSection.shopping_cart_link).click()
-            self.click(*MainPage.InnerSection.delete_shopping_cart_position_button).click()
+            self.click(*MainPage.HeaderSection.shopping_cart_link)
+            self.click(*MainPage.InnerSection.delete_shopping_cart_position_button)
             assert self.wd.find_element(*MainPage.InnerSection.shopping_cart_info).text == 'Shopping Cart'
 
