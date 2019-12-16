@@ -1,7 +1,5 @@
-from config import setUpConfig
 from decouple import config
 
-data = setUpConfig()
 
 def test_adding_to_wish_list(driver):
     """Тест добавления позиции в список желаемых покупок"""
