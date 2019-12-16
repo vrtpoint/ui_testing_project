@@ -4,8 +4,8 @@ from pages.main_page import Authorization, Products
 
 class ApplicationHelper():
 
-    def __init__(self):
-        self.wd = WebDriver()
+    def __init__(self, driver):
+        self.wd = driver
         self.wd.implicitly_wait(60)
         self.wd.maximize_window()
         self.authorization = Authorization(self)

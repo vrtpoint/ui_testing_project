@@ -24,6 +24,6 @@ def driver(request):
         driver = webdriver.Safari()
     elif browser == "opera":
         driver = webdriver.Opera()
-    fixture = ApplicationHelper()
+    fixture = ApplicationHelper(driver)
     request.addfinalizer(fixture.destroy)
     return fixture
