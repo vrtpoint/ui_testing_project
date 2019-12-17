@@ -1,6 +1,6 @@
 from selenium import webdriver
 import pytest
-from fixtures.application import ApplicationHelper
+from fixtures.root import DriverHelper
 
 def pytest_addoption(parser):
     """Добавление различных аргументов командной строки"""
@@ -25,7 +25,7 @@ def driver(request):
     elif browser == "opera":
         driver = webdriver.Opera()
 
-    fixture = ApplicationHelper(driver)
+    fixture = DriverHelper(driver)
     request.addfinalizer(fixture.destroy)
 
     return fixture

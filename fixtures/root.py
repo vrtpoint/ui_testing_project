@@ -1,8 +1,8 @@
-from selenium.webdriver.firefox.webdriver import WebDriver
-from pages.main_page import Authorization, Products
+from pages.application.shopping_cart import Products
+from pages.authorization import Authorization
 
 
-class ApplicationHelper():
+class DriverHelper():
 
     def __init__(self, driver):
         self.wd = driver
