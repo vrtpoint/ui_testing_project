@@ -1,5 +1,5 @@
 from selenium.webdriver.common.alert import Alert
-from locators.product_page import LoginProductPage, AdminPage
+from locators.administrative.product_page import LoginProductPage, AdminPage
 from config import setUpConfig
 import time
 
