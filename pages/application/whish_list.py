@@ -2,7 +2,7 @@ from locators.main_page import MainPage
 from pages.helpers.base import BaseActions
 
 
-class Products(BaseActions):
+class WishList(BaseActions):
 
         product = MainPage
 
