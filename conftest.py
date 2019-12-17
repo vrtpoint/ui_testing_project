@@ -1,6 +1,5 @@
 import pytest
 from selenium import webdriver
-import pytest
 from fixtures.root import DriverHelper
 
 def pytest_addoption(parser):
