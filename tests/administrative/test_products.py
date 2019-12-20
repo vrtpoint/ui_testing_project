@@ -1,31 +1,29 @@
-from selenium.webdriver.common.alert import Alert
-from locators.administrative.product_page import LoginProductPage, AdminPage
-from config import setUpConfig
-import time
+from decouple import config
 
-
-data = setUpConfig()
 
 def test_addition_product_item(driver):
     """Тест добавления выбранного товара"""
-    driver.get(data['url'] + 'admin')
-    driver.find_element(*LoginProductPage.login_field).clear()
-    driver.find_element(*LoginProductPage.login_field).send_keys('user')
-    driver.find_element(*LoginProductPage.password_field).clear()
-    driver.find_element(*LoginProductPage.password_field).send_keys('bitnami1')
-    driver.find_element(*LoginProductPage.submit_login_button).click()
-    driver.find_element(*AdminPage.catalog_list).click()
-    driver.find_element(*AdminPage.products_link).click()
-    driver.find_element(*AdminPage.Products.add_product_item).click()
-    driver.find_element(*AdminPage.Products.product_name_field).send_keys('What is Lorem Ipsum?')
-    driver.find_element(*AdminPage.Products.meta_tag_title).send_keys('What is Lorem Ipsum?')
-    driver.find_element(*AdminPage.Products.data_link).click()
-    driver.find_element(*AdminPage.Products.model_field).clear()
-    driver.find_element(*AdminPage.Products.model_field).send_keys('Product 1')
-    driver.find_element(*AdminPage.Products.submission_button).click()
-    assert driver.find_element(*AdminPage.Products.operation_status).text.split("\n")[0] == 'Success: You have modified products!'
-    driver.find_element(*AdminPage.logout_button).click()
-    assert driver.find_element(*LoginProductPage.entry_title).text == 'Please enter your login details.'
+    driver.open(config('url') + 'admin')
+    driver.authorization.login(config('admin_username'), config('admin_password'))
+
+    # driver.find_element(*LoginProductPage.login_field).clear()
+    # driver.find_element(*LoginProductPage.login_field).send_keys('user')
+    # driver.find_element(*LoginProductPage.password_field).clear()
+    # driver.find_element(*LoginProductPage.password_field).send_keys('bitnami1')
+    # driver.find_element(*LoginProductPage.submit_login_button).click()
+    # driver.find_element(*AdminPage.catalog_list).click()
+    # driver.find_element(*AdminPage.products_link).click()
+    # driver.find_element(*AdminPage.Products.add_product_item).click()
+    # driver.find_element(*AdminPage.Products.product_name_field).send_keys('What is Lorem Ipsum?')
+    # driver.find_element(*AdminPage.Products.meta_tag_title).send_keys('What is Lorem Ipsum?')
+    # driver.find_element(*AdminPage.Products.data_link).click()
+    # driver.find_element(*AdminPage.Products.model_field).clear()
+    # driver.find_element(*AdminPage.Products.model_field).send_keys('Product 1')
+    # driver.find_element(*AdminPage.Products.submission_button).click()
+    # assert driver.find_element(*AdminPage.Products.operation_status).text.split("\n")[0] == 'Success: You have modified products!'
+    # driver.find_element(*AdminPage.logout_button).click()
+    # assert driver.find_element(*LoginProductPage.entry_title).text == 'Please enter your login details.'
+
 
 def test_edition_product_item(driver):
     """Тест изменения выбранного товара"""

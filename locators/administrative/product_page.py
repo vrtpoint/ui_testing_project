@@ -11,6 +11,7 @@ class LoginProductPage:
 
 class AdminPage:
 
+    dashboard_text = (By.CSS_SELECTOR, '#content h1')
     catalog_list = (By.CSS_SELECTOR, '#menu-catalog .collapsed')
     products_link = (By.CSS_SELECTOR, '#collapse1 > li:nth-child(2) a')
     logout_button = (By.CSS_SELECTOR, '.navbar-right .fa-sign-out')

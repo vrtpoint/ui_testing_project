@@ -1,6 +1,6 @@
 from pages.application.shopping_cart import ShoppingCart
 from pages.application.wish_list import WishList
-from pages.authorization import Authorization
+from pages.application.authorization import Authorization
 
 
 class DriverHelper():
