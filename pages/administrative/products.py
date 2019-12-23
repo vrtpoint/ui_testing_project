@@ -1,20 +1,23 @@
 from selenium.webdriver.common.alert import Alert
-from locators.administrative.product_page import LoginProductPage, AdminPage
+from locators.administrative.product_page import AdminPage
 from pages.helpers.base_actions import BaseActions
+
 
 class Products(BaseActions):
 
+    product = AdminPage
+
+
     def add_product_item(self):
-        self.click(*self.AdminPage.catalog_list)
-        self.click(*self.AdminPage.products_link)
-        self.click(*self.AdminPage.Products.add_product_item)
-        self.input(*self.AdminPage.Products.add_product_item, value = 'What is Lorem Ipsum?')
-        self.input(*self.AdminPage.Products.meta_tag_title, value='What is Lorem Ipsum?')
-        self.click(*self.AdminPage.Products.data_link)
-        self.input(*self.AdminPage.Products.model_field, value='Product 1')
-        self.click(*self.AdminPage.Products.submission_button)
+        self.click(*self.product.catalog_list)
+        self.click(*self.product.products_link)
+        self.click(*self.product.add_product_item)
+        self.input(*self.product.add_product_item, value = 'What is Lorem Ipsum?')
+        self.input(*self.product.meta_tag_title, value='What is Lorem Ipsum?')
+        self.click(*self.product.data_link)
+        self.input(*self.product.model_field, value='Product 1')
+        self.click(*self.product.submission_button)
         #assert
-        self.click(*self.AdminPage.Products.logout_button)
         #assert
 
 # def test_edition_product_item(driver):
