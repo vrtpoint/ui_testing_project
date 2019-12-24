@@ -1,9 +1,6 @@
-from pages.application.shopping_cart import ShoppingCart
-from pages.application.wish_list import WishList
-from pages.application.authorization import ApplicationAuthorization
-from pages.administrative.authorization import AdminPageAuthorization
-from pages.administrative.products import Products
-
+from pages.shopping_cart import ShoppingCart
+from pages.wish_list import WishList
+from pages.authorization import ApplicationAuthorization
 
 
 class DriverHelper():
@@ -12,11 +9,9 @@ class DriverHelper():
         self.wd = driver
         self.wd.implicitly_wait(60)
         self.wd.maximize_window()
+        self.shopping_cart = ShoppingCart(self)
+        self.wish_list = WishList(self)
         self.authorization = ApplicationAuthorization(self)
-        self.authorization = AdminPageAuthorization(self)
-        self.products = ShoppingCart(self)
-        self.products = WishList(self)
-        self.products = Products(self)
 
     def open(self, url):
         wd = self.wd

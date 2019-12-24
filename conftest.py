@@ -19,7 +19,7 @@ def driver(request):
     elif browser == "firefox":
         options = webdriver.FirefoxOptions()
         options.add_argument("--headless")
-        driver = webdriver.Firefox(options=options)
+        driver = webdriver.Firefox()
     elif browser == "safari":
         driver = webdriver.Safari()
     elif browser == "opera":

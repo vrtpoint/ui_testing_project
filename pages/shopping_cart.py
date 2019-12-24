@@ -1,4 +1,4 @@
-from locators.application.main_page import MainPage
+from locators.main_page import MainPage
 from pages.helpers.base_actions import BaseActions
 
 
