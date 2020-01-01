@@ -9,17 +9,23 @@ def pytest_addoption(parser):
 
 @pytest.fixture(scope="session")
 def driver(request):
-    """Фикстура запуска различных браузеров в headless режимe"""
+    """Фикстура запуска различных браузеров в обычном и headless режимах"""
     browser = request.config.getoption("--browser")
     headless = request.config.getoption("--headless")
     if browser == 'chrome':
-        options = webdriver.ChromeOptions()
-        options.add_argument("--headless")
-        driver = webdriver.Chrome(options=options)
+        if headless == False:
+            driver = webdriver.Chrome()
+        else:
+            options = webdriver.ChromeOptions()
+            options.add_argument("--headless")
+            driver = webdriver.Chrome(options=options)
     elif browser == "firefox":
-        options = webdriver.FirefoxOptions()
-        options.add_argument("--headless")
-        driver = webdriver.Firefox()
+        if headless == False:
+            driver = webdriver.Firefox()
+        else:
+            options = webdriver.FirefoxOptions()
+            options.add_argument("--headless")
+            driver = webdriver.Firefox()
     elif browser == "safari":
         driver = webdriver.Safari()
     elif browser == "opera":
