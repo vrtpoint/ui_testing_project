@@ -1,6 +1,8 @@
 from decouple import config
+import allure
 
 
+@allure.feature('Работа с корзиной')
 def test_adding_to_shopping_cart(driver):
     """Тест добавления позиции в корзину покупок"""
     driver.open(config('url'))
@@ -8,6 +10,7 @@ def test_adding_to_shopping_cart(driver):
     driver.shopping_cart.add_to_shopping_cart()
     driver.authorization.logout()
 
+@allure.feature('Работа с корзиной')
 def test_removal_position_from_shopping_cart(driver):
     """Тест удаления позиции из корзины покупок"""
     driver.open(config('url'))
