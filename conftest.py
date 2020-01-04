@@ -21,11 +21,11 @@ def driver(request):
             driver = webdriver.Chrome(options=options)
     elif browser == "firefox":
         if headless == False:
-            driver = webdriver.Firefox()
+           driver = webdriver.Firefox()
         else:
             options = webdriver.FirefoxOptions()
             options.add_argument("--headless")
-            driver = webdriver.Firefox()
+            driver = webdriver.Firefox(options=options)
     elif browser == "safari":
         driver = webdriver.Safari()
     elif browser == "opera":
