@@ -18,6 +18,7 @@ class BaseActions:
         self.__wait.until(EC.visibility_of_element_located((type_selector, selector)))
 
     def _click(self, type_selector, selector):
+        self.__waiting_for_element(type_selector, selector)
         self.__searching_element(type_selector, selector).click()
 
     def _input(self, type_selector, selector, value):
