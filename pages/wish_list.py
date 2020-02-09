@@ -4,11 +4,15 @@ from pages.helpers.base_actions import BaseActions
 
 
 class WishList(BaseActions):
+        """Класс для работы с списком желаемых покупок"""
 
         wish_list = WishList
+        """Экземпляр класса для доступа к локаторам по работе с списком желаемых покупок"""
         auth = Authorization
-
+        """Экземпляр класса для доступа к локаторам по работе с авторизацией"""
+        
         def add_to_wish_list(self):
+            """Метод добавления позиции в список желаемых покупок"""
             self._click(*self.auth.logo_name)
             assert self._wd.find_element(*self.auth.logo_name).is_displayed()
             feature_elements = self._wd.find_elements(*self.wish_list.featured_section)
@@ -27,6 +31,7 @@ class WishList(BaseActions):
                 .text == 'MacBook'
 
         def remove_from_wish_list(self):
+            """Метод удаления позиции из списка желаемых покупок"""
             self._click(*self.auth.logo_name)
             assert self._wd.find_element(*self.auth.logo_name).is_displayed()
             feature_elements = self._wd.find_elements(*self.wish_list.featured_section)
