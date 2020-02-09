@@ -2,6 +2,7 @@ from selenium.webdriver.common.by import By
 
 
 class WishList:
+    """Класс с локаторами для работы со списком желаемых покупок"""
 
     featured_section = (By.CSS_SELECTOR, '#content .product-thumb.transition .caption h4 a')
     wish_list_link = (By.CSS_SELECTOR, '#wishlist-total .fa-heart')
