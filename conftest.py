@@ -3,8 +3,6 @@ from selenium import webdriver
 from fixtures.root import DriverHelper
 
 def pytest_addoption(parser):
-    """Добавление аргументов командной строки:
-    запуск различных браузеров, запуск в режиме headless"""
     parser.addoption("--browser", action="store", default="firefox", \
                      help="This is request browser", required=False)
     parser.addoption("--headless", action="store", default=False, \
@@ -12,7 +10,6 @@ def pytest_addoption(parser):
 
 @pytest.fixture(scope="session")
 def driver(request):
-    """Фикстура запуска различных браузеров в обычном и headless режимах"""
     browser = request.config.getoption("--browser")
     headless = request.config.getoption("--headless")
     if browser == 'chrome':
