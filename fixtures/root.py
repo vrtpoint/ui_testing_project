@@ -8,7 +8,7 @@ class DriverHelper:
 
     def __init__(self, driver):
         self.wd = driver
-        self.wd.implicitly_wait(30)
+        self.wd.implicitly_wait(5)
         self.wd.maximize_window()
         self.shopping_cart = ShoppingCart(self)
         self.wish_list = WishList(self)
