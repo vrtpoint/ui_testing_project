@@ -5,7 +5,6 @@ from pages.authorization import ApplicationAuthorization
 
 class DriverHelper:
 
-
     def __init__(self, driver):
         self.wd = driver
         self.wd.implicitly_wait(5)

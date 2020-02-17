@@ -5,11 +5,9 @@ from pages.helpers.base_actions import BaseActions
 
 class WishList(BaseActions):
 
-
         wish_list = WishList
         auth = Authorization
 
-        
         def add_to_wish_list(self):
             self._click(*self.auth.logo_name)
             assert self._wd.find_element(*self.auth.logo_name).is_displayed()
