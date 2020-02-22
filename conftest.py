@@ -1,6 +1,6 @@
 import pytest
 from selenium import webdriver
-from fixtures.root import DriverHelper
+
 
 def pytest_addoption(parser):
     parser.addoption("--browser", action="store", default="firefox", \
@@ -31,7 +31,7 @@ def driver(request):
     elif browser == "opera":
         driver = webdriver.Opera()
 
-    fixture = DriverHelper(driver)
+    fixture = driver
     request.addfinalizer(fixture.quit())
 
     return fixture
