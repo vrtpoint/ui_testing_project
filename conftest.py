@@ -32,6 +32,6 @@ def driver(request):
         driver = webdriver.Opera()
 
     fixture = DriverHelper(driver)
-    request.addfinalizer(fixture.destroy)
+    request.addfinalizer(fixture.quit())
 
     return fixture
