@@ -1,10 +1,10 @@
-from locators.authorization import Authorization
+from locators.authorization import AuthorizationLocators
 from pages.helpers.base_actions import BaseActions
 
 
-class ApplicationAuthorization(BaseActions):
+class ApplicationAuthorizationPage(BaseActions):
 
-        auth = Authorization
+        auth = AuthorizationLocators
 
         def login(self, app_username, app_password):
             self._click(*self.auth.my_account_link)

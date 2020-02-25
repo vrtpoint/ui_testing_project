@@ -1,12 +1,12 @@
-from locators.authorization import Authorization
-from locators.wish_list import WishList
+from locators.authorization import AuthorizationLocators
+from locators.wish_list import WishListLocators
 from pages.helpers.base_actions import BaseActions
 
 
-class WishList(BaseActions):
+class WishListPage(BaseActions):
 
-        wish_list = WishList
-        auth = Authorization
+        wish_list = WishListLocators
+        auth = AuthorizationLocators
 
         def add_to_wish_list(self):
             self._click(*self.auth.logo_name)

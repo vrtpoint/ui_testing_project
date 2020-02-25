@@ -1,12 +1,12 @@
-from locators.authorization import Authorization
-from locators.shopping_cart import ShoppingCart
+from locators.authorization import AuthorizationLocators
+from locators.shopping_cart import ShoppingCartLocators
 from pages.helpers.base_actions import BaseActions
 
 
-class ShoppingCart(BaseActions):
+class ShoppingCartPage(BaseActions):
 
-        shopping_cart = ShoppingCart
-        auth = Authorization
+        shopping_cart = ShoppingCartLocators
+        auth = AuthorizationLocators
 
         def add_to_shopping_cart(self):
             self._click(*self.auth.logo_name)
