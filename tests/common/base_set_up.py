@@ -1,12 +1,12 @@
 import pytest
 
 
-class TestBaseSetUp:
+class BaseSetUp:
 
     @pytest.fixture(autouse=True)
     def action_driver(self, driver):
         self.driver = driver
-        return self.driver
+        yield self.driver
 
     def get_page(self, Page):
         return Page(self.driver)
