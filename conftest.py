@@ -31,7 +31,6 @@ def driver(request):
     elif browser == "opera":
         driver = webdriver.Opera()
 
-    fixture = driver
-    request.addfinalizer(fixture.quit())
+    request.addfinalizer(driver.close)
 
-    return fixture
+    return driver
