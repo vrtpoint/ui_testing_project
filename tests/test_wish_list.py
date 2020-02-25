@@ -1,6 +1,6 @@
-from tests.common.base_set_up import BaseSetUp
-from pages.authorization import ApplicationAuthorizationPage
-from pages.wish_list import WishListPage
+from src.common.base_set_up import BaseSetUp
+from src.pages.authorization import ApplicationAuthorizationPage
+from src.pages.wish_list import WishListPage
 from decouple import config
 import allure
 
