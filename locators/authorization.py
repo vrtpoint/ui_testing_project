@@ -1,7 +1,7 @@
 from selenium.webdriver.common.by import By
 
 
-class Authorization:
+class AuthorizationLocators:
 
     my_account_link = (By.CSS_SELECTOR, '#top-links .dropdown .fa-user')
     register_link = (By.CSS_SELECTOR, 'ul.dropdown-menu-right li:nth-child(1)')

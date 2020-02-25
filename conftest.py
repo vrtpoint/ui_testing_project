@@ -1,11 +1,11 @@
 import pytest
 from selenium import webdriver
-from fixtures.root import DriverHelper
+
 
 def pytest_addoption(parser):
-    parser.addoption("--browser", action="store", default="firefox", \
+    parser.addoption("--browser", action="store", default="firefox",
                      help="This is request browser", required=False)
-    parser.addoption("--headless", action="store", default=False, \
+    parser.addoption("--headless", action="store", default=False,
                      help="This is headless mode")
 
 @pytest.fixture(scope="session")
@@ -31,7 +31,6 @@ def driver(request):
     elif browser == "opera":
         driver = webdriver.Opera()
 
-    fixture = DriverHelper(driver)
-    request.addfinalizer(fixture.destroy)
+    request.addfinalizer(driver.close)
 
-    return fixture
+    return driver

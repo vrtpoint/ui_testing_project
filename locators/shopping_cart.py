@@ -1,7 +1,7 @@
 from selenium.webdriver.common.by import By
 
 
-class ShoppingCart:
+class ShoppingCartLocators:
 
     add_to_cart_button = (By.CSS_SELECTOR, '#content i.fa-shopping-cart')
     cart_link = (By.CSS_SELECTOR, 'a[title="Shopping Cart"]')
