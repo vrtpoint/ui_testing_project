@@ -4,7 +4,7 @@ import pytest
 class BaseSetUp:
 
     @pytest.fixture(autouse=True)
-    def action_driver(self, driver):
+    def set_up_driver(self, driver):
         self.driver = driver
         yield self.driver
 
