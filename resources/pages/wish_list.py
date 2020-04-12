@@ -1,6 +1,6 @@
-from src.locators.auth import AuthorizationLocators
-from src.locators.wish_list import WishListLocators
-from src.common.base_actions import BaseActions
+from resources.locators.auth import AuthorizationLocators
+from resources.locators.wish_list import WishListLocators
+from resources.common.base_actions import BaseActions
 
 
 class WishListPage(BaseActions):

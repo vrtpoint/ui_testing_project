@@ -1,6 +1,6 @@
-from src.locators.auth import AuthorizationLocators
-from src.locators.shopping_cart import ShoppingCartLocators
-from src.common.base_actions import BaseActions
+from resources.locators.auth import AuthorizationLocators
+from resources.locators.shopping_cart import ShoppingCartLocators
+from resources.common.base_actions import BaseActions
 
 
 class ShoppingCartPage(BaseActions):
