@@ -1,5 +1,5 @@
 from src.common.base_set_up import BaseSetUp
-from src.pages.authorization import ApplicationAuthorizationPage
+from src.pages.auth import ApplicationAuthorizationPage
 from src.pages.shopping_cart import ShoppingCartPage
 from decouple import config
 import allure

@@ -1,4 +1,4 @@
-from src.locators.authorization import AuthorizationLocators
+from src.locators.auth import AuthorizationLocators
 from src.common.base_actions import BaseActions
 
 

@@ -1,4 +1,4 @@
-from src.locators.authorization import AuthorizationLocators
+from src.locators.auth import AuthorizationLocators
 from src.locators.shopping_cart import ShoppingCartLocators
 from src.common.base_actions import BaseActions
 
