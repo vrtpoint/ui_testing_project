@@ -1,5 +1,5 @@
-from src.locators.authorization import AuthorizationLocators
-from src.common.base_actions import BaseActions
+from resources.locators.authorization import AuthorizationLocators
+from resources.common.base_actions import BaseActions
 
 
 class ApplicationAuthorizationPage(BaseActions):
