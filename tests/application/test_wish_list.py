@@ -1,6 +1,6 @@
 from resources.common.base_set_up import BaseSetUp
-from resources.pages.authorization import ApplicationAuthorizationPage
-from resources.pages.wish_list import WishListPage
+from resources.application.pages.authorization import ApplicationAuthorizationPage
+from resources.application.pages.wish_list import WishListPage
 from decouple import config
 import allure
 

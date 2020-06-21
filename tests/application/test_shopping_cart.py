@@ -1,6 +1,6 @@
 from resources.common.base_set_up import BaseSetUp
-from resources.pages.authorization import ApplicationAuthorizationPage
-from resources.pages.shopping_cart import ShoppingCartPage
+from resources.application.pages.authorization import ApplicationAuthorizationPage
+from resources.application.pages.shopping_cart import ShoppingCartPage
 from decouple import config
 import allure
 
