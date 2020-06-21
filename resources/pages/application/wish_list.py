@@ -1,5 +1,5 @@
-from resources.application.locators.authorization import AuthorizationLocators
-from resources.application.locators.wish_list import WishListLocators
+from resources.locators.application.authorization import AuthorizationLocators
+from resources.locators.application.wish_list import WishListLocators
 from resources.common.base_actions import BaseActions
 
 

@@ -1,6 +1,6 @@
 from resources.common.base_set_up import BaseSetUp
-from resources.application.pages.authorization import ApplicationAuthorizationPage
-from resources.application.pages.shopping_cart import ShoppingCartPage
+from resources.pages.application.authorization import ApplicationAuthorizationPage
+from resources.pages.application.shopping_cart import ShoppingCartPage
 from decouple import config
 import allure
 
@@ -24,5 +24,6 @@ class TestShoppingCart(BaseSetUp):
         shopping_page = self.get_page(ShoppingCartPage)
         shopping_page.remove_position_from_shopping_cart()
         auth_page.logout()
+
 
 

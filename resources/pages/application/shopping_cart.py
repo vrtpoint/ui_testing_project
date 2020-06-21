@@ -1,5 +1,5 @@
-from resources.application.locators.authorization import AuthorizationLocators
-from resources.application.locators.shopping_cart import ShoppingCartLocators
+from resources.locators.application.authorization import AuthorizationLocators
+from resources.locators.application.shopping_cart import ShoppingCartLocators
 from resources.common.base_actions import BaseActions
 
 
