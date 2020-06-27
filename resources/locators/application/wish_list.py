@@ -1,3 +1,4 @@
+"""Модуль с локаторами списка желаемых покупок"""
 from selenium.webdriver.common.by import By
 
 

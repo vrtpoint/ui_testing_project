@@ -1,3 +1,4 @@
+"""Модуль с тестами корзиной покупок приложения"""
 from resources.common.base_set_up import BaseSetUp
 from resources.pages.application.authorization import ApplicationAuthorizationPage
 from resources.pages.application.shopping_cart import ShoppingCartPage

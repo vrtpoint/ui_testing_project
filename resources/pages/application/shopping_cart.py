@@ -1,3 +1,4 @@
+"""Модуль с методами для работы с корзиной покупок приложения"""
 from resources.locators.application.authorization import AuthorizationLocators
 from resources.locators.application.shopping_cart import ShoppingCartLocators
 from resources.common.base_actions import BaseActions

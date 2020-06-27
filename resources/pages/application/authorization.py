@@ -1,3 +1,4 @@
+"""Модуль с методами для работы с авторизацией на странице приложения"""
 from resources.locators.application.authorization import AuthorizationLocators
 from resources.common.base_actions import BaseActions
 

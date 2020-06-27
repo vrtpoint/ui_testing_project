@@ -1,3 +1,4 @@
+"""Модуль с локаторами страницы авторизации панели администратора"""
 from selenium.webdriver.common.by import By
 
 

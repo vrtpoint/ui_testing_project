@@ -1,3 +1,4 @@
+"""Модуль с методами для работы с списком желаемых покупок приложения"""
 from resources.locators.application.authorization import AuthorizationLocators
 from resources.locators.application.wish_list import WishListLocators
 from resources.common.base_actions import BaseActions

@@ -1,3 +1,4 @@
+"""Модуль с методами для работы со страницей авторизации панели администратора"""
 from resources.locators.admin_panel.auth import LoginProductPage
 from resources.locators.admin_panel.home import Menu
 from resources.common.base_actions import BaseActions

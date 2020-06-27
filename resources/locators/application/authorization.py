@@ -1,3 +1,4 @@
+"""Модуль с локаторами авторизации на странице приложения"""
 from selenium.webdriver.common.by import By
 
 
