@@ -3,7 +3,6 @@ from resources.common.base_set_up import BaseSetUp
 from resources.pages.admin_panel.auth import AdminPanelAuthorizationPage
 from resources.pages.admin_panel.product_page import ProductPage
 from decouple import config
-from fixtures.database import data_base_query
 import allure
 
 
