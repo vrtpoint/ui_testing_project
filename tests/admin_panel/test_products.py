@@ -17,7 +17,6 @@ class TestProducts(BaseSetUp):
         auth_page.login(config('admin_username'), config('admin_password'))
         sidebar = self.get_page(ProductPage)
         sidebar.add_product_item()
-        self.check_console(self.driver)
         sql_query = 'SELECT * FROM oc_product WHERE model="test"'
         assert data_base_query(sql_query)
 
@@ -29,7 +28,6 @@ class TestProducts(BaseSetUp):
         auth_page.login(config('admin_username'), config('admin_password'))
         product = self.get_page(ProductPage)
         product.edit_product_item()
-        self.check_console(self.driver)
         sql_query = 'SELECT * FROM oc_product WHERE model="test_product"'
         assert data_base_query(sql_query)
 
@@ -41,6 +39,5 @@ class TestProducts(BaseSetUp):
         auth_page.login(config('admin_username'), config('admin_password'))
         product = self.get_page(ProductPage)
         product.delete_product_item()
-        self.check_console(self.driver)
         sql_query = 'SELECT * FROM oc_product WHERE model="test_product"'
         assert not data_base_query(sql_query)
