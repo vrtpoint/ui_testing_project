@@ -1,14 +1,15 @@
 import mysql.connector
+from decouple import config
 
 
 def data_base_query(sql_query):
     try:
         connection = mysql.connector.connect(
-            user='root',
-            password='password',
-            host='localhost',
-            port='3306',
-            database='bitnami_opencart')
+            user=config('user'),
+            password=config('password'),
+            host=config('host'),
+            port=config('port'),
+            database=config('database'))
         cursor = connection.cursor()
         cursor.execute(sql_query)
         result = cursor.fetchall()
