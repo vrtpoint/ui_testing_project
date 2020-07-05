@@ -27,15 +27,9 @@ def browser_log(logger_name):
     filehandler_error.setLevel(level=logging.ERROR)
     filehandler_error.setFormatter(formatter)
 
-    consolehandler_info = logging.StreamHandler()
-    consolehandler_info.setLevel(level=logging.INFO)
-    consolehandler_info.setFormatter(formatter)
-
     log.addHandler(filehandler_info)
     log.addHandler(filehandler_warning)
     log.addHandler(filehandler_error)
-
-    log.addHandler(consolehandler_info)
 
     return log
 
